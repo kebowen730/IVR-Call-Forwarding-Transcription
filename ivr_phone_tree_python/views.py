@@ -13,7 +13,7 @@ from ivr_phone_tree_python import app
 from ivr_phone_tree_python.view_helpers import twiml
 
 # replace with the number you want to use
-RECEIVING_NUMBER = "XXXX"
+RECEIVING_NUMBER = "+18324827880"
 
 @app.route("/")
 @app.route("/ivr")
@@ -60,7 +60,7 @@ def menu():
 
         else:
             option_actions[selected_option](response)
-            return twiml(response)
+        return twiml(response)
 
     return _redirect_welcome()
 
