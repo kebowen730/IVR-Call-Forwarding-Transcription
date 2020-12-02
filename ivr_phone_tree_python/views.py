@@ -23,7 +23,7 @@ def home():
 
 @app.route("/ivr/welcome", methods=["POST"])
 def welcome():
-"""Greets callers, presents a menu and gathers input"""
+    """Greets callers, presents a menu and gathers input"""
     response = VoiceResponse()
     with response.gather(
         num_digits=1, action=url_for("menu"), method="POST"
